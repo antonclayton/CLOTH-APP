@@ -22,8 +22,6 @@ const Navbar = () => {
             <Link to='/profile' className='link' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
         </Stack>
     </Stack>
-    //asdasdasdasd
-    //asdasd testing
   )
 }
 
