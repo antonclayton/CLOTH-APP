@@ -15,9 +15,9 @@ const Navbar = () => {
         </div>
 
         <Stack className='rightSide' justifyContent='baseline' direction='row'>
-            <Link to='/' style={{padding:'35px 100px', color: 'white'}}>Search</Link>
-            <Link to='/about' style={{padding:'35px 100px', color: 'white'}}>About</Link>
-            <Link to='/profile' style={{padding:'35px 0px 35px 100px', color: 'white'}}>Profile</Link>
+            <Link to='/' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Search</Link>
+            <Link to='/about' style={{padding: '30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>About</Link>
+            <Link to='/profile' style={{padding:'30px 0px 30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
         </Stack>
     </Stack>
   )
