@@ -6,18 +6,17 @@ const Navbar = () => {
   return (
     <Stack className='navbar'
     direction='row'
-    justifyContent='space-around'
-    sx={{gap: '100px', height: "100px"}}
-    backgroundColor="#000000"
-    display= 'flex' flexDirection='right'>
+    justifyContent='flex-end'
+    alignItems='baseline'
+    backgroundColor="#000000">
         <div className='leftSide'>
 
         </div>
 
         <Stack className='rightSide' justifyContent='baseline' direction='row'>
-            <Link to='/' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Search</Link>
-            <Link to='/about' style={{padding: '30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>About</Link>
-            <Link to='/profile' style={{padding:'30px 0px 30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
+            <Link to='/' className='link' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Search</Link>
+            <Link to='/about' className='link'style={{padding: '30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>About</Link>
+            <Link to='/profile' className='link' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
         </Stack>
     </Stack>
   )
