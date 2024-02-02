@@ -11,7 +11,7 @@ const Navbar = () => {
     backgroundColor="#000000">
 
         <Stack className='leftSide'> 
-            
+
         </Stack>
 
         <Stack className='rightSide' 
