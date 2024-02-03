@@ -1,9 +1,9 @@
-#closed {
-    display: block;
+.closed {
+    display: none;
 }
 
-#open {
-    display: none;
+.open {
+    display: block;
 }
 
 #toggle {
@@ -13,4 +13,8 @@
     background: none;
     color: white;
     padding-left: 40px;
+}
+
+#toggle:hover {
+    cursor: pointer;
 }
