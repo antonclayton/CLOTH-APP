@@ -5,3 +5,12 @@
 #open {
     display: none;
 }
+
+#toggle {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+    color: white;
+    padding-left: 40px;
+}

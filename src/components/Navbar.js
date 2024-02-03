@@ -45,7 +45,7 @@ const Navbar = () => {
             <Link to='/profile' className='link' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
           </div>
 
-          <button onClick={toggleNavbar}><MenuIcon/></button>
+          <button onClick={toggleNavbar} id='toggle'><MenuIcon fontSize='large'/></button>
         </Stack>
     </Stack>
   )
