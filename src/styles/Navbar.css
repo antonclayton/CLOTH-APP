@@ -1,16 +1,16 @@
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
-    background: transparent;
+#closed {
+    display: block;
 }
 
-/* .link {
-    padding:'30px 100px';
-    color: 'white';
-    font-size: '24px';
-    text-decoration: 'none';
-} */
+#open {
+    display: none;
+}
+
+#toggle {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background: none;
+    color: white;
+    padding-left: 40px;
+}
