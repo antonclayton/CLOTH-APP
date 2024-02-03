@@ -6,15 +6,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 const Navbar = () => {
 
-  const[openLinks, setOpenLinks] = useState(true);
+  const[openLinks, setOpenLinks] = useState(true); //openLinks is current state; setOpenLinks acts on that state; useState(initial state is true)
 
   const toggleNavbar = () => {
-    setOpenLinks(!openLinks)
+    setOpenLinks(!openLinks) //flip from true -> false or false -> true
   }
 
   useEffect(() => {
     const handleResize = () => {
-      setOpenLinks(window.innerWidth > 950) //set true if less than 600px
+      setOpenLinks(window.innerWidth > 950) //set true if greater 600px
       // console.log(window.innerWidth > 800);
       // console.log(window.innerWidth) debugging
     }
@@ -45,9 +45,9 @@ const Navbar = () => {
         height='40px'
         padding='40px 100px'> 
           <div className={openLinks ? 'open' : 'closed'}>
-            <Link to='/' className='link' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Search</Link>
-            <Link to='/about' className='link'style={{padding: '30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>About</Link>
-            <Link to='/profile' className='link' style={{padding:'30px 100px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
+            <Link to='/' className='link' style={{padding:'30px 75px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Search</Link>
+            <Link to='/about' className='link'style={{padding: '30px 75px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>About</Link>
+            <Link to='/profile' className='link' style={{padding:'30px 75px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
           </div>
 
           <button onClick={toggleNavbar} id='toggle' className={openLinks ? 'closed' : 'open'}><MenuIcon fontSize='large'/></button>
