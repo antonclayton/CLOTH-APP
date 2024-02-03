@@ -43,14 +43,14 @@ const Navbar = () => {
         justifyContent='center' 
         direction='row'
         height='40px'
-        padding='40px 100px'> 
+        margin='45px 100px'> 
           <div className={openLinks ? 'open' : 'closed'}>
-            <Link to='/' className='link' style={{padding:'30px 75px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Search</Link>
-            <Link to='/about' className='link'style={{padding: '30px 75px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>About</Link>
-            <Link to='/profile' className='link' style={{padding:'30px 75px', color: 'white', fontSize: '24px', textDecoration: 'none'}}>Profile</Link>
+            <Link to='/' className='link' style={{margin:'30px 50px', padding: '10px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>Search</Link>
+            <Link to='/about' className='link'style={{margin: '30px 50px', padding: '10px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>About</Link>
+            <Link to='/profile' className='link' style={{margin:'30px 50px', padding: '10px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>Profile</Link>
           </div>
 
-          <button onClick={toggleNavbar} id='toggle' className={openLinks ? 'closed' : 'open'}><MenuIcon fontSize='large'/></button>
+          <button onClick={toggleNavbar} id='toggle' ><MenuIcon fontSize='large'/></button>
         </Stack>
     </Stack>
   )
