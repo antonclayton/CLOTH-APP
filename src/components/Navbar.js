@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 import '../styles/Navbar.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import AccountCircle from '@mui/icons-material/AccountCircle'
 
 const Navbar = () => {
 
@@ -35,22 +36,18 @@ const Navbar = () => {
     alignItems='baseline'
     backgroundColor="#000000">
 
-        <Stack className='leftSide'> 
-            
-        </Stack>
-
         <Stack className='rightSide' 
         justifyContent='center' 
         direction='row'
         height='40px'
         margin='45px 100px'> 
           <div className={openLinks ? 'open' : 'closed'}>
-            <Link to='/' className='link' style={{margin:'30px 50px', padding: '10px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>Search</Link>
-            <Link to='/about' className='link'style={{margin: '30px 50px', padding: '10px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>About</Link>
-            <Link to='/profile' className='link' style={{margin:'30px 50px', padding: '10px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>Profile</Link>
+            <Link to='/' className='link' style={{margin:'25px 25px', padding: '15px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>Search</Link>
+            <Link to='/about' className='link'style={{margin: '25px 25px', padding: '15px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>About</Link>
+            <Link to='/profile' className='link' style={{margin:'30px 25px', padding: '25px 15px 10px 15px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '50px'}}><AccountCircle fontSize='large'/></Link>
           </div>
 
-          <button onClick={toggleNavbar} id='toggle' ><MenuIcon fontSize='large'/></button>
+          <button onClick={toggleNavbar} id='toggle'><MenuIcon fontSize='large'/></button>
         </Stack>
     </Stack>
   )
