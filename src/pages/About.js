@@ -15,7 +15,7 @@ const About = () => {
       spacing={4}
       margin='100px 140px'
       >
-        <Typography variant='h3' padding='0px 75px' color='#313639'>
+        <Typography variant='h4' padding='0px 25px' color='#313639'>
           Clothing Search Engine
         </Typography>
 
