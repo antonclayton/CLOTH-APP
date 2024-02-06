@@ -1,55 +1,80 @@
-/*import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Button } from './Button';
 import { Link } from 'react-router-dom';
-import { Stack } from '@mui/material';
-import '../styles/Navbar.css'
-import MenuIcon from '@mui/icons-material/Menu';
+import './Navbar.css';
 
-const Navbar = () => {
+function Navbar() {
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
-  const[openLinks, setOpenLinks] = useState(true); //openLinks is current state; setOpenLinks acts on that state; useState(initial state is true)
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-  const toggleNavbar = () => {
-    setOpenLinks(!openLinks) //flip from true -> false or false -> true
-  }
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setOpenLinks(window.innerWidth > 950) //set true if greater 600px
-      // console.log(window.innerWidth > 800);
-      // console.log(window.innerWidth) debugging
-    }
+    showButton();
+  }, []);
 
-    window.addEventListener('resize', handleResize); //activates if 'resize' occurs
-
-    handleResize() //called initially once when the page is first rendered to check if the window is of a certain width
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  },[]) //empty dependency array to make sure the effect only runs once
+  window.addEventListener('resize', showButton);
 
   return (
-    <Stack className='navbar'
-    direction='row'                 //styles
-    justifyContent='flex-end'
-    alignItems='baseline'
-    backgroundColor="#000000">
-
-        <Stack className='rightSide' 
-        justifyContent='center' 
-        direction='row'
-        height='40px'
-        margin='45px 100px'> 
-          <div className={openLinks ? 'open' : 'closed'}>
-            <Link to='/' className='link' style={{margin:'25px 25px', padding: '15px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>Search</Link>
-            <Link to='/about' className='link'style={{margin: '25px 25px', padding: '15px 25px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '10px'}}>About</Link>
-            <Link to='/profile' className='link' style={{margin:'30px 25px', padding: '25px 15px 10px 15px', color: 'white', fontSize: '24px', textDecoration: 'none', border: '1px solid white', borderRadius: '50px'}}><AccountCircle fontSize='large'/></Link>
+    <>
+      <nav className='navbar'>
+        <div className='navbar-container'>
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            CLOTH
+            <i class='fab fa-typo3' />
+          </Link>
+          <div className='menu-icon' onClick={handleClick}>
+            <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+          <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+            <li className='nav-item'>
+              <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                Home
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/search'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                Search
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link
+                to='/about'
+                className='nav-links'
+                onClick={closeMobileMenu}
+              >
+                About
+              </Link>
+            </li>
 
-          <button onClick={toggleNavbar} id='toggle'><MenuIcon fontSize='large'/></button>
-        </Stack>
-    </Stack>
-  )
+            <li>
+              <Link
+                to='/profile'
+                className='nav-links-mobile'
+                onClick={closeMobileMenu}
+              >
+                Profile
+              </Link>
+            </li>
+          </ul>
+          {button && <Button buttonStyle='btn--outline'>PROFILE</Button>}
+        </div>
+      </nav>
+    </>
+  );
 }
 
-export default Navbar */
+export default Navbar;
