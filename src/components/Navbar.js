@@ -59,7 +59,6 @@ function Navbar() {
                 About
               </Link>
             </li>
-
             <li>
               <Link
                 to='/profile'
