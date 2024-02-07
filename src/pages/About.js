@@ -4,13 +4,23 @@ import '../styles/About.css'
 
 const About = () => {
   return (
-    <div className='about-container'>
-      <h1 className='about-header'>About CLOTH</h1>
-      <p className='about-paragraph'>CLOTH is a search engine for secondhand / 
-      vintage clothes that pulls from websites such as Grailed, Mercari, Poshmark, etc.
-      We are currently in the development stage and will be adding features as we finish them. 
-      Grailed will most likely be the first marketplace we will implement to our search engine</p>
-    </div>
+    <body>
+      <div className="about-header-container">
+        <h1 className='about-header'>About CLOTH</h1>
+        
+        
+
+      </div>
+      <div className="header-image">j</div>
+      <div className='about-container'>
+        
+        <p className='about-paragraph'>CLOTH is a search engine for secondhand / 
+        vintage clothes that pulls from websites such as Grailed, Mercari, Poshmark, etc.
+        We are currently in the development stage and will be adding features as we finish them. 
+        Grailed will most likely be the first marketplace we will implement to our search engine</p>
+      </div>
+    </body>
+    
   )
 }
 

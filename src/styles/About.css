@@ -9,19 +9,46 @@ a, a:visited, a:active {
     height: 90vh;
     align-items: center;
     font-size: 3rem;
+    /*
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/frontpage.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
+    */
     font-size: xx-large;
+}
+.header-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100px;
+    /*
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../assets/frontpage.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    testing something
+    */
+    background-color: blue;
 }
 
 .about-header {
     display: flex;
     margin-top: 5%;
     font-weight: bold;
+    color:white;
+    font-size: 8rem;
     
+}
+.about-header-container{
+    background-color: rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 5vh 0 220px;
+
 }
 .about-paragraph {
     margin: 2% 20% 20% 20%;
