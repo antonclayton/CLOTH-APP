@@ -1,11 +1,10 @@
 import React from 'react'
-import Footer from './Footer';
+import HomeThing from '../components/homething'
 
 const Home = () => {
   return (
     <div>
-      Home
-      <Footer />
+      <HomeThing/>
     </div>
   )
 }

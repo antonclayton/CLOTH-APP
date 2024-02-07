@@ -51,19 +51,10 @@ function Footer() {
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
               CLOTH
-              <i class='fab fa-typo3' />
             </Link>
           </div>
-          <small class='website-rights'>CLOTH © 2020</small>
+          <small class='website-rights'>CLOTH © 2024</small>
           <div class='social-icons'>
-            <Link
-              class='social-icon-link facebook'
-              to='/'
-              target='_blank'
-              aria-label='Facebook'
-            >
-              <i class='fab fa-facebook-f' />
-            </Link>
             <Link
               class='social-icon-link instagram'
               to='/'
