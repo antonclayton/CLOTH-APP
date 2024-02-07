@@ -12,7 +12,7 @@ function HomeThing() {
           <form>
             <input
               className='user-input'
-              name='email'
+              name='name'
               type='input'
               placeholder='Search'
             />
