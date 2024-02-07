@@ -28,6 +28,20 @@ function Navbar() {
     <>
       <nav className='navbar'>
         <div className='navbar-container'>
+        <section className='footer-subscription'>
+            
+            <div className='input-areas'>
+              <form>
+                <input
+                  className='user-input'
+                  name='name'
+                  type='input'
+                  placeholder='Search'
+                />
+                <Button buttonStyle='btn--outline'>Search</Button>
+              </form>
+            </div>
+          </section>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
             CLOTH
           </Link>

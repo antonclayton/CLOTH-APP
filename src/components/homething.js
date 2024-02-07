@@ -6,20 +6,7 @@ import { Button } from '../components/Button';
 function HomeThing() {
     return (
         <div className='home-container'>
-            <section className='footer-subscription'>
-            
-        <div className='input-areas'>
-          <form>
-            <input
-              className='user-input'
-              name='name'
-              type='input'
-              placeholder='Search'
-            />
-            <Button buttonStyle='btn--outline'>Search</Button>
-          </form>
-        </div>
-      </section>
+          <h1>Welcome to the site</h1>
         </div>
     )
 }
