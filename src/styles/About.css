@@ -14,13 +14,15 @@ a, a:visited, a:active {
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
+    font-size: xx-large;
 }
 
 .about-header {
     display: flex;
     margin-top: 5%;
+    font-weight: bold;
     
 }
 .about-paragraph {
-    margin: 2% 10% 10% 10%;
+    margin: 2% 20% 20% 20%;
 }
